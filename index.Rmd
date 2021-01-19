@@ -29,6 +29,9 @@ link-citations: yes
 abstract: |
   This is where the abstract should go.
 description: "A short description"
+layout: 
+ - 3p
+ - authoryear
 ---
 
 # Introduction {#intro}
