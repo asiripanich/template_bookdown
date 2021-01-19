@@ -30,6 +30,10 @@ abstract: |
   This is where the abstract should go.
 description: "A short description"
 layout: "3p, authoryear"
+keywords:
+  - Accessibility
+  - Passive Data
+  - Location Choice
 ---
 
 # Introduction {#intro}
