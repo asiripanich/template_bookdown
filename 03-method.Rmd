@@ -52,7 +52,8 @@ datasummary_balance(
   ~type, 
   data = car_mlogit %>% 
     select(type, fuel, price, range, size), 
-  dinm = FALSE
+  dinm = FALSE,
+  title = "Descriptive Statistics of Dataset"
   )
 ```
 
