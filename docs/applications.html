@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title> 4 Applications | Article Long Title</title>
   <meta name="description" content="A short description" />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
   <meta property="og:title" content=" 4 Applications | Article Long Title" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 
 
 
-<meta name="date" content="2021-04-20" />
+<meta name="date" content="2021-08-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -42,6 +42,7 @@ div.abstract{
   width: 90%;
 }
 </style>
+<script src="libs/header-attrs-2.8/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -59,24 +60,25 @@ div.abstract{
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -96,7 +98,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -129,6 +131,29 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 
@@ -147,11 +172,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
 <li class="chapter" data-level="2" data-path="literature.html"><a href="literature.html"><i class="fa fa-check"></i><b>2</b> Literature</a></li>
-<li class="chapter" data-level="3" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>3</b> Methods</a><ul>
+<li class="chapter" data-level="3" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>3</b> Methods</a>
+<ul>
 <li class="chapter" data-level="3.1" data-path="methods.html"><a href="methods.html#data"><i class="fa fa-check"></i><b>3.1</b> Data</a></li>
 <li class="chapter" data-level="3.2" data-path="methods.html"><a href="methods.html#models"><i class="fa fa-check"></i><b>3.2</b> Models</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>4</b> Applications</a><ul>
+<li class="chapter" data-level="4" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>4</b> Applications</a>
+<ul>
 <li class="chapter" data-level="4.1" data-path="applications.html"><a href="applications.html#additional-analysis"><i class="fa fa-check"></i><b>4.1</b> Additional Analysis</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="conclusions.html"><a href="conclusions.html"><i class="fa fa-check"></i><b>5</b> Conclusions</a></li>
@@ -176,18 +203,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="applications" class="section level1">
+<div id="applications" class="section level1" number="4">
 <h1><span class="header-section-number"> 4</span> Applications</h1>
 <p>This section might be called “Results” instead of “Applications,” depending
 on what it is that you are working on. But you’ll probably say something like
 “The initial model estimation results are given in Table <a href="applications.html#tab:estimation-results">4.1</a>.”
 That table is created with the <code>modelsummary()</code> package and function.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="applications.html#cb3-1"></a>model1 &lt;-<span class="st"> </span><span class="kw">mlogit</span>(choice <span class="op">~</span><span class="st"> </span>type <span class="op">+</span><span class="st"> </span>price <span class="op">|</span><span class="st"> </span><span class="dv">-1</span>, <span class="dt">data =</span> car_mlogit)</span>
-<span id="cb3-2"><a href="applications.html#cb3-2"></a>model2 &lt;-<span class="st"> </span><span class="kw">update</span>(model1, .<span class="op">~</span>. <span class="op">+</span><span class="st"> </span>range)</span>
-<span id="cb3-3"><a href="applications.html#cb3-3"></a></span>
-<span id="cb3-4"><a href="applications.html#cb3-4"></a>models &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="st">&quot;Model 1&quot;</span> =<span class="st"> </span>model1, <span class="st">&quot;Model 2&quot;</span> =<span class="st"> </span>model2)</span></code></pre></div>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="applications.html#cb4-1"></a><span class="kw">modelsummary</span>(models, <span class="dt">estimate =</span> <span class="st">&quot;{estimate} ({statistic})&quot;</span>,</span>
-<span id="cb4-2"><a href="applications.html#cb4-2"></a>             <span class="dt">title =</span> <span class="st">&quot;Model Estimation Results&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="applications.html#cb3-1" aria-hidden="true" tabindex="-1"></a>model1 <span class="ot">&lt;-</span> <span class="fu">mlogit</span>(choice <span class="sc">~</span> type <span class="sc">+</span> price <span class="sc">|</span> <span class="sc">-</span><span class="dv">1</span>, <span class="at">data =</span> car_mlogit)</span>
+<span id="cb3-2"><a href="applications.html#cb3-2" aria-hidden="true" tabindex="-1"></a>model2 <span class="ot">&lt;-</span> <span class="fu">update</span>(model1, .<span class="sc">~</span>. <span class="sc">+</span> range)</span>
+<span id="cb3-3"><a href="applications.html#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="applications.html#cb3-4" aria-hidden="true" tabindex="-1"></a>models <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="st">&quot;Model 1&quot;</span> <span class="ot">=</span> model1, <span class="st">&quot;Model 2&quot;</span> <span class="ot">=</span> model2)</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="applications.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">modelsummary</span>(models, <span class="at">estimate =</span> <span class="st">&quot;{estimate} ({statistic})&quot;</span>,</span>
+<span id="cb4-2"><a href="applications.html#cb4-2" aria-hidden="true" tabindex="-1"></a>             <span class="at">title =</span> <span class="st">&quot;Model Estimation Results&quot;</span>)</span></code></pre></div>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
 <span id="tab:estimation-results">Table 4.1: </span>Model Estimation Results
@@ -419,15 +446,13 @@ rho20
 <p>With those results presented, you can go into a discussion of what they mean.
 first, discuss the actual results that are shown in the table, and then any
 interesting or unintuitive observations.</p>
-<div id="additional-analysis" class="section level2">
+<div id="additional-analysis" class="section level2" number="4.1">
 <h2><span class="header-section-number">4.1</span> Additional Analysis</h2>
 <p>Usually, it is good to use your model for something.</p>
 <ul>
-<li>Hypothetical policy analysis
-<ul>
+<li>Hypothetical policy analysis</li>
 <li>Statistical validation effort</li>
 <li>Equity or impact analysis</li>
-</ul></li>
 </ul>
 <p>If the analysis is substantial, it might become its own top-level section.</p>
 
@@ -462,6 +487,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
