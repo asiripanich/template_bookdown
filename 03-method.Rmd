@@ -24,6 +24,14 @@ options(knitr.kable.NA = '')
 # tells kableExtra to not load latex table packages in the chunk output
 options(kableExtra.latex.load_packages = FALSE) 
 
+# round and format numbers that get printed in the text of the article.
+inline_hook <- function(x) {
+  if (is.numeric(x)) {
+    format(x, digits = 3, big.mark = ",")
+  } else x
+}
+knitr::knit_hooks$set(inline = inline_hook)
+
 knitr::opts_chunk$set(echo = TRUE, cache = TRUE)
 
 # options for latex-only output
