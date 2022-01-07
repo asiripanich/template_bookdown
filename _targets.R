@@ -16,23 +16,23 @@ tar_option_set(packages = c("tidyverse", "bookdown"))
 source("R/functions.R")
 
 
-# Targets necessary to build your data and run your model
-data_targets <- list(
-  tar_target(data, data.frame(x = sample.int(100), y = sample.int(100))),
-  tar_target(summary, summ(data)) # Call your custom functions as needed.
+data_targets <- tar_plan(
+  data =  data.frame(x = sample.int(100), y = sample.int(100)),
+  summary = summ(data) # Call your custom functions as needed.
 )
 
 
 
 # Targets necessary to build the book / article
-book_targets <- list(
-  tar_target(report, rmarkdown::)
+book_targets <- tar_plan(
+  report = bookdown::render_book(input = ".", output_yaml = "_output.yml", 
+                                 config_file = "_bookdown.yml")
 )
 
 
 
 # run all targets
-list(
-  data_targets, 
-  book_targets
+tar_plan(
+  data = data_targets, 
+  book = book_targets
 )
