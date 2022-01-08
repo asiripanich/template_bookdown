@@ -1,8 +1,0 @@
-name|type|data|command|depend|seed|path|time|size|bytes|format|iteration|parent|children|seconds|warnings|error
-report|stem|a626ba384a4cdb17|82762d4812db6ff9|c3b5fc02cdc369c1|-237041703||t18999.7230652351s|f21b4888ae8bdafc|118|rds|vector|||0.594||
-summary|stem|f154a8e4d588c16d|504e748dde9ca536|ce69eea8c00dcde1|760118442||t18999.7230653058s|24d52ebf1535bba2|123|rds|vector|||0.004||
-data|stem|9dd299f446671602|732e8702a3d848a2|5d36e19862d4cc7b|1588979285||t18999.7236192312s|9bd045cf5c09d995|1721|rds|vector|||0.352||
-summ|function|725b50cbf04a3ed2||||||||||||||
-book_targets|object|265a6cc4ef42cffa||||||||||||||
-data_targets|object|91d0da6b0d9de21d||||||||||||||
-book|stem|d92d04967293ca7b|dff8ba7a1fbfdec0|392018e8fa9b0e8d|-1172694532||t18999.7239377662s|b83e223494d999b0|1459|rds|vector|||0.349||
