@@ -1,38 +1,73 @@
+# Created by use_targets().
+# Follow the comments below to fill in this target script.
+# Then follow the manual to check and run the pipeline:
+#   https://books.ropensci.org/targets/walkthrough.html#inspect-the-pipeline # nolint
+
+# Load packages required to define the pipeline:
 library(targets)
-library(tarchetypes)
-# This is an example _targets.R file. Every
-# {targets} pipeline needs one.
-# Use tar_script() to create _targets.R and tar_edit()
-# to open it again for editing.
-# Then, run tar_make() to run the pipeline
-# and tar_read(summary) to view the results.
+library(tarchetypes) # Load other packages as needed. # nolint
 
-# Set target-specific options such as packages.
-tar_option_set(packages = c("tidyverse", "bookdown"))
-
-# Define custom functions and other global objects.
-# This is where you write source(\"R/functions.R\")
-# if you keep your functions in external scripts.
-source("R/functions.R")
-
-
-data_targets <- tar_plan(
-  data =  data.frame(x = sample.int(100), y = sample.int(100)),
-  summary = summ(data) # Call your custom functions as needed.
+# Set target options:
+tar_option_set(
+  packages = c("bookdown", "here"), # packages that your targets need to run
+  format = "rds" # default storage format
+  # Set other options as needed.
 )
 
+# tar_make_clustermq() configuration (okay to leave alone):
+options(clustermq.scheduler = "multicore")
+
+# tar_make_future() configuration (okay to leave alone):
+# Install packages {{future}}, {{future.callr}}, and {{future.batchtools}} to allow use_targets() to configure tar_make_future() options.
+
+# Load the R scripts with your custom functions:
+for (file in list.files("R", full.names = TRUE)) source(file)
+# source("other_functions.R") # Source other scripts as needed. # nolint
 
 
-# Targets necessary to build the book / article
-book_targets <- tar_plan(
-  report = bookdown::render_book(input = ".", output_yaml = "_output.yml", 
-                                 config_file = "_bookdown.yml")
+
+# Replace the target list below with your own:
+data_targets <- list(
+  tar_target(
+    name = data,
+    command = tibble(x = rnorm(100), y = rnorm(100))
+    #   format = "feather" # efficient storage of large data frames # nolint
+  ),
+  tar_target(
+    name = model,
+    command = lm(y ~ x, data = data)
+  )
 )
 
+# Targets necessary to build the paper
+global_paper_deps <-
+  get_paper_deps()
 
+paper_targets <- list(
+  tar_target(
+    config_file,
+    "_bookdown.yml",
+    format = "file"
+  ),
+  tar_file(
+    paper_deps,
+    unlist(global_paper_deps)
+  ),
+  tar_target(
+    paper,
+    render_with_deps(
+      input = here::here(),
+      config_file = config_file,
+      deps = c(
+        !!tar_knitr_deps_expr(global_paper_deps$rmd),
+        paper_deps
+      )
+    )
+  )
+)
 
 # run all targets
-tar_plan(
-  data = data_targets, 
-  book = book_targets
+list(
+  data = data_targets,
+  paper = paper_targets
 )
