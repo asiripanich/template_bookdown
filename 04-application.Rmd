@@ -5,16 +5,9 @@ on what it is that you are working on. But you'll probably say something like
 "The initial model estimation results are given in Table \@ref(tab:estimation-results)."
 That table is created with the `modelsummary()` package and function.
 
-```{r estimation}
-model1 <- mlogit(choice ~ type + price | -1, data = car_mlogit)
-model2 <- update(model1, .~. + range)
-
-models <- list("Model 1" = model1, "Model 2" = model2)
-```
-
-
 ```{r estimation-results}
-modelsummary(models, estimate = "{estimate} ({statistic})",
+tar_load(model)
+modelsummary(model, estimate = "{estimate} ({statistic})",
              title = "Model Estimation Results")
 ```
 
